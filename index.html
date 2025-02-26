@@ -7,47 +7,103 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>E-commerce Website</title>
+    <link rel="shortcut icon" href="./img/sb-logo.png" type="image/x-icon">
+    <title>StarBarako</title>
     <style>
         * {
             box-sizing: border-box;
+            color: #006241;
         }
 
         li {
             list-style: none;
         }
-        a {
-        text-decoration: none;
+
+        nav {
+            background-color: #f2f0eb;
+        }
+
+        nav, a {
+            font-weight: 500;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .home-section {
+            min-height: 100vh;
+        }
+
+        .home-container {
+            margin: auto;
+        }
+
+        .homepage-title {
+            margin-top: 15rem;
+        }
+
+        .homepage-image {
+            margin-top: 10rem;
+            margin-left: 10rem;
         }
 
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-sm container-fluid">
+        <div class="logo container">
+            <a class="navbar-brand" href="Home" style="color: #006241; font-weight: 900;">
+                <img src="./img/sb-logo.png" alt="Starbucks logo" width="70" height="70">
+                STARBUCKS
+            </a>
+        </div>
+        <ul class="navbar-nav ms-auto">
             <li class="nav-item px-4">
-                <a class="nav-link text-light active" href="#Home">HOME</a>
+                <a class="nav-link active" href="#Home" style="color: #006241;">HOME</a>
             </li>
             <li class="nav-item px-4">
-                <a class="nav-link text-light" href="#">ABOUT</a>
+                <a class="nav-link" href="#About" style="color: #006241;">ABOUT</a>
             </li>
             <li class="nav-item px-4">
-                <a class="nav-link text-light" href="#">CONTACT</a>
+                <a class="nav-link" href="#" style="color: #006241;">CONTACT</a>
             </li>
         </ul>
     </nav>
 
-    <main class="container-body">
-        <section id="Home">
-            <div class="container p-5 m-5 bg-light justify-content-center">
-                <div class="home px-100" data-aos="fade-right">
-                    <h1>hello world</h1>
-                    <p>Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit,</p>
-                    <button class="btn btn-primary">Browse</button>
-                    <button class="btn btn-primary">Contact Us</button>
+    <main class="container ">
+        <section id="Home" class="home-section">
+            <div class="container home-container">
+                <div class="home-content row">
+                    <div class="col" data-aos="fade-right">
+                        <div class="homepage-title">
+                            <h1>Starbucks.</h1>
+                            <p>You can't buy happiness, but you can buy a well-brewed cup, and that's pretty close</p>
+                        </div>
+                        <div class="homepage-btn gap-2">
+                            <button class="btn btn-primary">Products</button>
+                            <button class="btn btn-secondary">Contact Us.</button>
+                        </div>
+                    </div>
+                    <div class="col" data-aos="zoom-in">
+                        <div class="homepage-image">
+                            <img src="./img/mocha.png" alt="homepage-mocha" width="300" height="450">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
+        <section id="About">
+            <div class="container">
+                <h1 class="text-center pt-10">About Us</h1>
+            </div>
+        </section>
+
+        <section id="Product">
+            <div class="container">
+                <h1 class="text-center">Product</h1>
             </div>
         </section>
     </main>
@@ -55,13 +111,13 @@
     <script>
         AOS.init({
             disable: false,
-            startEvent: 'DOMContentLoaded',
             offset: 120,
             delay: 0,
             duration: 1000,
-            easing: 'ease',
-            once: false,
+            easing: 'ease-in-out',
+            once: true,
             mirror: false,
+            anchorPlacement: 'top-bottom'
         });
 
     </script>
